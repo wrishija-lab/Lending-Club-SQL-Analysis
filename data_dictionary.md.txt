@@ -1,0 +1,73 @@
+# Lending Club Data Dictionary
+
+This document describes the main variables used in the Lending Club SQL analysis project.
+
+## Loan Information
+
+| Variable | Description |
+|---|---|
+| loan_amnt | Amount of loan requested |
+| funded_amnt | Amount of loan funded |
+| funded_amnt_inv | Amount funded by investors |
+| term | Loan repayment term |
+| int_rate | Interest rate charged on the loan |
+| installment | Monthly loan payment |
+| grade | Lending Club credit grade |
+| sub_grade | Detailed credit-risk sub-grade |
+
+## Borrower Information
+
+| Variable | Description |
+|---|---|
+| emp_title | Borrower's employment title |
+| emp_length | Length of employment |
+| home_ownership | Borrower's home ownership status |
+| annual_inc | Borrower's annual income |
+| verification_status | Income verification category |
+| dti | Debt-to-income ratio |
+
+## Loan Outcome
+
+| Variable | Description |
+|---|---|
+| loan_status | Current loan status/outcome |
+| purpose | Purpose of the loan |
+| issue_d | Loan issue month and year |
+| addr_state | Borrower's state |
+
+## Credit Risk Variables
+
+| Variable | Description |
+|---|---|
+| delinq_2yrs | Number of delinquencies in the previous two years |
+| inq_last_6mths | Credit inquiries in the previous six months |
+| open_acc | Number of open credit accounts |
+| pub_rec | Number of derogatory public records |
+| revol_bal | Revolving credit balance |
+| revol_util | Revolving credit utilization |
+| total_acc | Total number of credit accounts |
+
+## Analytical Segments
+
+The project creates analytical segments including:
+
+- Income bands
+- DTI bands
+- Issue-year cohorts
+- Credit-grade groups
+- Grade × income segments
+- Term × grade segments
+
+## Data Quality
+
+The final cleaned dataset contains 2,260,668 loan records.
+
+Key fields were checked for missing values and data consistency.
+
+## Analytical Note
+
+The project uses observed charge-off rates rather than lifetime default probabilities.
+
+Loan cohorts have different maturity periods, so newer issue years may have had less time to experience charge-off. Small categories should also be interpreted cautiously.
+
+The analysis is descriptive and does not establish causal relationships.
